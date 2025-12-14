@@ -1,0 +1,79 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.formGroup { /* form-group -> formGroup */
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box; /* 패딩 포함 계산 */
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 200px;
+}
+
+.buttonArea {
+    margin-top: 20px;
+}
+
+.btnSubmit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btnSubmit:hover {
+    background-color: #45a049;
+}
+
+.btnCancel { /* btn-cancel -> btnCancel */
+    background-color: #f44336;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btnCancel:hover {
+    background-color: #da190b;
+}
