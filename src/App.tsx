@@ -2,11 +2,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './pages/Home';
 import BoardList from './pages/BoardList/BoardList.tsx';
 import BoardRegister from './pages/BoardRegister/BoardRegister.tsx';
+import Header from "./components/Header.tsx";
 
 function App() {
     return (
         <BrowserRouter>
-            {/*<Header />*/}
+            <Header />
 
             <div style={{ padding: '20px' }}>
                 <Routes>
