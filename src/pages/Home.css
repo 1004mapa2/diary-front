@@ -1,25 +1,30 @@
-/* 전체 레이아웃 (App.css나 index.css에 있어도 무방하지만 컴포넌트용으로 분리) */
+* {
+    box-sizing: border-box;
+}
+
 .container {
     max-width: 800px;
-    width: 100%;
+    width: 90%;
     background-color: white;
     padding: 60px 40px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 20px auto; /* 중앙 정렬을 위해 margin auto 추가 */
+    margin: 40px auto;
 }
 
 h1 {
     font-size: 48px;
     color: #333;
     margin-bottom: 20px;
+    word-break: keep-all;
 }
 
 .subtitle {
     font-size: 18px;
     color: #666;
     margin-bottom: 50px;
+    word-break: keep-all;
 }
 
 .button-group {
@@ -38,6 +43,7 @@ h1 {
     text-decoration: none;
     display: inline-block;
     transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 140px;
 }
 
 .btn:hover {
@@ -71,7 +77,7 @@ h1 {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
@@ -95,5 +101,55 @@ h1 {
 .loading {
     color: #999;
     font-size: 14px;
-    grid-column: 1 / -1; /* 로딩 텍스트 가운데 정렬 */
+    grid-column: 1 / -1;
+}
+
+/* 모바일 반응형 (화면 너비 768px 이하일 때 적용) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px 0;
+        font-size: 16px;
+    }
+
+    .stats {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+
+    .stats-grid {
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 480px) {
+        .stats-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
 }
